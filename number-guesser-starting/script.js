@@ -14,4 +14,14 @@ const compareGuesses = (humanGuess, computerGuess, target)=>{
     return humanGuessProximity <= computerGuessProximity? true:false
 }
 
-console.log(compareGuesses(6,5,9))
+const updateScore = (winner)=>{
+    if (winner=="human"){
+        humanScore++
+    }else{
+        computerScore++
+    }
+}
+
+const advanceRound = ()=>{
+    return ++currentRoundNumber
+}
